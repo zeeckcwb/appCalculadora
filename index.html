@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12bfc7a935.js" crossorigin="anonymous"></script>
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Basic calculator with SASS and JS</h1>
+            <div class="modes">
+                <input id="night_mode" class="switch switch--shadow" type="checkbox" />
+                <label for="night_mode"></label>
+            </div>
+            <p>click in bulbs</p>
+        </div>
+        <div class="calculator">
+            <input id="result" type="text" class="result" placeholder="0" disabled="disabled" />
+            <div class="rows">
+                <div class="row row_1">
+                    <button onclick="calcular('acao', 'c')" type="button" class="btn action">C</button>
+                    <button onclick="calcular('acao', '/')" type="button" class="btn action">/</button>
+                    <button onclick="calcular('acao', '*')" type="button" class="btn action">x</button>
+                </div>
+
+                <div class="row row_2">
+                    <button onclick="calcular('valor', 7)" type="button" class="btn number">7</button>
+                    <button onclick="calcular('valor', 8)" type="button" class="btn number">8</button>
+                    <button onclick="calcular('valor', 9)" type="button" class="btn number">9</button>
+                    <button onclick="calcular('acao', '-')" type="button" class="btn action">-</button>
+                </div>
+                
+                <div class="row row_3">
+                    <button onclick="calcular('valor', 4)" type="button" class="btn number">4</button>
+                    <button onclick="calcular('valor', 5)" type="button" class="btn number">5</button>
+                    <button onclick="calcular('valor', 6)" type="button" class="btn number">6</button>
+                    <button onclick="calcular('acao', '+')" type="button" class="btn action">+</button>
+                </div>
+
+                <div class="row row_4">
+                    <button onclick="calcular('valor', 1)" type="button" class="btn number">1</button>
+                    <button onclick="calcular('valor', 2)" type="button" class="btn number">2</button>
+                    <button onclick="calcular('valor', 3)" type="button" class="btn number">3</button>
+                    <button style="height: 183%;" onclick="calcular('acao', '=')" type="button" class="btn action">=</button>
+                </div>
+
+                <div class="row row_5">
+                    <button onclick="calcular('valor', 0)" type="button" class="btn number">0</button>
+                    <button onclick="calcular('acao', '.')" type="button" class="btn action">.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
